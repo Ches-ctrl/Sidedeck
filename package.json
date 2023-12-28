@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "officegen": "^0.6.5",
+    "xlsx": "^0.18.5"
+  }
+}
