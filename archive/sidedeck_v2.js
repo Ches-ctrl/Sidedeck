@@ -1,5 +1,5 @@
 const fs = require('fs');
-// const xlsx = require('xlsx');
+const xlsx = require('xlsx');
 const officegen = require('officegen');
 
 // Load data from Excel file
