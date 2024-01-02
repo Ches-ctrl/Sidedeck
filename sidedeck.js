@@ -4,13 +4,29 @@ const officegen = require('officegen');
 
 // Load data from Excel file
 const excelFile = 'test_deck_builder.xlsx';
+// console.log('Loading data from ' + excelFile);
+
 const workbook = xlsx.readFile(excelFile);
-const worksheet = workbook.Sheets['Sheet1'];
+// console.log('Loaded ' + workbook.SheetNames.length + ' sheets');
+
+// console.log('Sheet names:');
+// workbook.SheetNames.forEach(sheetName => {
+//   console.log(sheetName);
+//   console.log(typeof sheetName);
+// });
+
+const worksheet = workbook.Sheets[`Sheet1`];
+// console.log(worksheet);
+
 const excelData = xlsx.utils.sheet_to_json(worksheet);
+// console.log('Loaded ' + excelData.length + ' rows');
 
 // Create a PowerPoint presentation
 const pptx = officegen('pptx');
+console.log('Created PowerPoint presentation');
+
 const slides = pptx.slides;
+console.log('Created slides ' + slides);
 
 // Iterate through Excel data and create slides
 for (const row of excelData) {
