@@ -1,4 +1,4 @@
-import pptxgen from "pptxgenjs";
+const pptxgen = require("pptxgenjs");
 
 // 1. Create a Presentation
 let pres = new pptxgen();
